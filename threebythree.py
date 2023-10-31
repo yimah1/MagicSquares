@@ -56,7 +56,7 @@ for x in list1:
         finallist.append(x)
 f = open("3x3magicsquares.txt", "w")
 for x in finallist:
-    f.write(x, "\n")
+    f.write(f"{x}\n\n")
 f.close()
 end = time.time()
 elapsed = end - start
