@@ -67,7 +67,7 @@ for x in list1:
         finallist.append(x)
 f = open("4x4magicsquares.txt", "w")
 for x in finallist:
-    f.write(f"{x}\n")
+    f.write(f"{x}\n\n")
 f.close()
 end = time.time()
 elapsed = end - start
