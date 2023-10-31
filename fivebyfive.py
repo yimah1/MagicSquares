@@ -66,7 +66,7 @@ def generate5x5(numbers, rowsums, colsums, diagsum):
                                                                 if np.sum(np.fliplr(magicsquare).diagonal()) == 65:
                                                                     print(magicsquare)
                                                                     f = open("5x5magicsquares.txt", "a")
-                                                                    f.write(magicsquare, "\n\n")
+                                                                    f.write(f"{magicsquare}\n\n")
                                                                     f.close()
                                                                     listofmagicsquares.append(magicsquare)
 
@@ -75,7 +75,7 @@ def generate5x5(numbers, rowsums, colsums, diagsum):
 
 numbers = list(range(1, 26))
 rowsums = [65, 65, 65, 65, 65]
-colsums = [65, 65, 65, 65, 65]
+colsums = rowsums
 start = time.time()
 list1 = generate5x5(numbers, rowsums, colsums, 65)
 '''
