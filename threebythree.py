@@ -43,22 +43,22 @@ def generate3x3(numbers, rowsums, colsums, diagsum):
     return listofmagicsquares
 
 
-'''
-numbers = list(range(1, 10))
-rowsums = [15, 15, 15]
-colsums = rowsums
-diagsum = 15
-start = time.time()
-list1 = generate3x3(numbers, rowsums, colsums, diagsum)
-finallist = []
-for x in list1:
-    if (np.sum(np.fliplr(x).diagonal()) == 15):
-        finallist.append(x)
-f = open("3x3magicsquares.txt", "w")
-for x in finallist:
-    f.write(f"{x}\n\n")
-f.close()
-end = time.time()
-elapsed = end - start
-print("It took", elapsed, "seconds")
-'''
+if __name__ == "__main__":
+    numbers = list(range(1, 10))
+    rowsums = [15, 15, 15]
+    colsums = rowsums
+    diagsum = 15
+    start = time.time()
+    list1 = generate3x3(numbers, rowsums, colsums, diagsum)
+    finallist = []
+    for x in list1:
+        if (np.sum(np.fliplr(x).diagonal()) == 15):
+            finallist.append(x)
+    f = open("3x3magicsquares.txt", "w")
+    for x in finallist:
+        f.write(f"{x}\n\n")
+    f.close()
+    end = time.time()
+    elapsed = end - start
+    print("It took", elapsed, "seconds")
+
