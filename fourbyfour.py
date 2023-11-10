@@ -54,22 +54,22 @@ def generate4x4(numbers, rowsums, colsums, diagsum):
     return listofmagicsquares
 
 
-'''
-numbers = list(range(1, 17))
-rowsums = [34, 34, 34, 34]
-colsums = rowsums
-diagsum = 34
-start = time.time()
-list1 = generate4x4(numbers, rowsums, colsums, diagsum)
-finallist = []
-for x in list1:
-    if (np.sum(np.fliplr(x).diagonal()) == 34):
-        finallist.append(x)
-f = open("4x4magicsquares.txt", "w")
-for x in finallist:
-    f.write(f"{x}\n\n")
-f.close()
-end = time.time()
-elapsed = end - start
-print("It took", elapsed, "seconds")
-'''
+if __name__ == "__main__":
+    numbers = list(range(1, 17))
+    rowsums = [34, 34, 34, 34]
+    colsums = rowsums
+    diagsum = 34
+    start = time.time()
+    list1 = generate4x4(numbers, rowsums, colsums, diagsum)
+    finallist = []
+    for x in list1:
+        if (np.sum(np.fliplr(x).diagonal()) == 34):
+            finallist.append(x)
+    f = open("4x4magicsquares.txt", "w")
+    for x in finallist:
+        f.write(f"{x}\n\n")
+    f.close()
+    end = time.time()
+    elapsed = end - start
+    print("It took", elapsed, "seconds")
+    
